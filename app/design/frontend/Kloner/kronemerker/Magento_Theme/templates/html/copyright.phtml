@@ -1,0 +1,25 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<div class="copayment-block">
+<small class="copyright">
+    <span><?php /* @escapeNotVerified */ echo $block->getCopyright() ?></span>
+</small>
+
+<small class="copyright">
+    <span><a href="kjopsvilkar"> - Kjøpsvilkår</a></span>
+</small>
+<?php
+    $static_block_id = 'payment_icon';
+    $block = $this->getLayout()->createBlock('Magento\Cms\Block\Block');
+    if($block) {
+        $block->setBlockId($static_block_id);
+    }
+    if($block){
+        echo '<div class="custom-block">'.$block->toHtml().'</div>';
+    }
+?>
+</div>
